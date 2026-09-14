@@ -233,6 +233,33 @@ ol.pub-list {
 
 .pub .pub-links a { margin-right: 12px; }
 
+/* ---------- teaching ---------- */
+ul.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course {
+  padding: 10px 0 10px 16px;
+  border-left: 2px solid var(--rule);
+}
+
+.course + .course { margin-top: 6px; }
+
+.course-title {
+  display: block;
+  font-weight: 600;
+}
+
+.course-meta {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
 /* ---------- contact ---------- */
 dl.contact-list {
   font-family: var(--sans);
