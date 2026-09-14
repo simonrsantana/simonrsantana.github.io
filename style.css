@@ -184,16 +184,28 @@ ul.quick-links {
   margin: 8px 0 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  row-gap: 6px;
-  column-gap: 18px;
+  flex-direction: column;
+  gap: 8px;
   font-family: var(--sans);
   font-size: 0.88rem;
   color: var(--text-muted);
 }
 
-ul.quick-links li {
+ul.quick-links li.loc-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+ul.quick-links li.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 6px;
+  column-gap: 18px;
+}
+
+ul.quick-links .link-item {
   display: flex;
   align-items: center;
   gap: 6px;
