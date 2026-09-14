@@ -116,21 +116,31 @@ header.hero {
   font-style: italic;
 }
 
-.hero-text .place {
-  margin: 0 0 10px;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-
 ul.quick-links {
   list-style: none;
-  margin: 0;
+  margin: 8px 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 16px;
+  align-items: center;
+  row-gap: 6px;
+  column-gap: 18px;
   font-family: var(--sans);
   font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+ul.quick-links li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+ul.quick-links svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--text-muted);
 }
 
 ul.quick-links a {
