@@ -1,13 +1,13 @@
 /* ---------- tokens ---------- */
 :root {
-  --bg: #f3f4f2;
-  --surface: #ffffff;
-  --text: #1c2321;
-  --text-muted: #5d6663;
-  --rule: #d9dcd8;
-  --accent: #33544e;
-  --accent-soft: #33544e14;
-  --link: #2c554d;
+  --bg: #efece4;
+  --surface: #f8f6f0;
+  --text: #2c2925;
+  --text-muted: #726c60;
+  --rule: #ddd7c8;
+  --accent: #8a7856;
+  --accent-soft: #8a785617;
+  --link: #6f5f40;
   --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -16,26 +16,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #14201d;
-    --surface: #1a2622;
-    --text: #e7ece9;
-    --text-muted: #93a49d;
-    --rule: #2c3934;
-    --accent: #8fc9ba;
-    --accent-soft: #8fc9ba1f;
-    --link: #a4d8c9;
+    --bg: #221f1a;
+    --surface: #2a2620;
+    --text: #eae5d9;
+    --text-muted: #a49b89;
+    --rule: #3a352c;
+    --accent: #c3ad82;
+    --accent-soft: #c3ad8220;
+    --link: #d3bf95;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #14201d;
-  --surface: #1a2622;
-  --text: #e7ece9;
-  --text-muted: #93a49d;
-  --rule: #2c3934;
-  --accent: #8fc9ba;
-  --accent-soft: #8fc9ba1f;
-  --link: #a4d8c9;
+  --bg: #221f1a;
+  --surface: #2a2620;
+  --text: #eae5d9;
+  --text-muted: #a49b89;
+  --rule: #3a352c;
+  --accent: #c3ad82;
+  --accent-soft: #c3ad8220;
+  --link: #d3bf95;
 }
 
 * { box-sizing: border-box; }
