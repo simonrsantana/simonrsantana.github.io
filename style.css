@@ -1,13 +1,14 @@
 /* ---------- tokens ---------- */
 :root {
-  --bg: #efece4;
-  --surface: #f8f6f0;
-  --text: #2c2925;
-  --text-muted: #726c60;
-  --rule: #ddd7c8;
-  --accent: #8a7856;
-  --accent-soft: #8a785617;
-  --link: #6f5f40;
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text: #171b23;
+  --text-muted: #5b6472;
+  --rule: #e3e6ec;
+  --accent: #3f6fb5;
+  --accent-soft: #3f6fb514;
+  --accent2: #c14953;
+  --link: #35588f;
   --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -16,26 +17,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #221f1a;
-    --surface: #2a2620;
-    --text: #eae5d9;
-    --text-muted: #a49b89;
-    --rule: #3a352c;
-    --accent: #c3ad82;
-    --accent-soft: #c3ad8220;
-    --link: #d3bf95;
+    --bg: #11141a;
+    --surface: #181c24;
+    --text: #e7eaf0;
+    --text-muted: #939bab;
+    --rule: #2a2f3a;
+    --accent: #86aee2;
+    --accent-soft: #86aee224;
+    --accent2: #e0959a;
+    --link: #a0c2ef;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #221f1a;
-  --surface: #2a2620;
-  --text: #eae5d9;
-  --text-muted: #a49b89;
-  --rule: #3a352c;
-  --accent: #c3ad82;
-  --accent-soft: #c3ad8220;
-  --link: #d3bf95;
+  --bg: #11141a;
+  --surface: #181c24;
+  --text: #e7eaf0;
+  --text-muted: #939bab;
+  --rule: #2a2f3a;
+  --accent: #86aee2;
+  --accent-soft: #86aee224;
+  --accent2: #e0959a;
+  --link: #a0c2ef;
 }
 
 * { box-sizing: border-box; }
@@ -55,8 +58,16 @@ body {
 .page {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding-block: 4px 80px;
-  border-top: 3px solid var(--accent);
+  padding-block: 0 80px;
+}
+
+.page::before {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 0;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  border-radius: 0 0 2px 2px;
 }
 
 /* ---------- header ---------- */
@@ -130,7 +141,7 @@ nav.links a {
   margin-right: 18px;
 }
 
-nav.links a:hover { color: var(--accent); }
+nav.links a:hover { color: var(--accent2); }
 
 /* ---------- sections ---------- */
 section { margin-bottom: 44px; }
@@ -149,7 +160,7 @@ h2 {
 p { margin: 0 0 14px; }
 
 a { color: var(--link); }
-a:hover { color: var(--accent); }
+a:hover { color: var(--accent2); }
 
 /* ---------- interests ---------- */
 ul.interests {
