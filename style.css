@@ -16,21 +16,6 @@
   --max-w: 700px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #11141a;
-    --surface: #181c24;
-    --text: #e7eaf0;
-    --text-muted: #939bab;
-    --rule: #2a2f3a;
-    --accent: #eef0f3;
-    --accent-soft: #eef0f31a;
-    --accent2: #9aa0aa;
-    --link: #adbdd4;
-    --on-accent: #11141a;
-  }
-}
-
 :root[data-theme="dark"] {
   --bg: #11141a;
   --surface: #181c24;
@@ -46,7 +31,8 @@
 
 * { box-sizing: border-box; }
 
-html { color-scheme: light dark; }
+html { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
 
 body {
   margin: 0;
@@ -140,6 +126,35 @@ body {
   background: var(--accent2);
   color: var(--on-accent);
 }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent2);
+}
+
+.theme-toggle svg {
+  width: 15px;
+  height: 15px;
+}
+
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 
 /* ---------- header ---------- */
 header.hero {
