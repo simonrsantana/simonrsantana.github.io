@@ -411,8 +411,8 @@ footer {
 }
 
 .watermark {
-  width: 78px;
-  height: 78px;
+  width: 55px;
+  height: 55px;
   margin: 14px auto 0;
   background: var(--text);
   opacity: 0.16;
