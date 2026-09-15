@@ -297,27 +297,14 @@ ul.interests li {
 }
 
 /* ---------- publications ---------- */
-.pub-year {
-  font-family: var(--mono);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: var(--accent);
-  margin: 26px 0 10px;
-}
-
-.pub-year:first-of-type { margin-top: 0; }
-
-ol.pub-list {
+ul.pub-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  counter-reset: pub;
 }
 
 .pub {
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 10px 22px;
   position: relative;
   border-bottom: 1px dashed var(--rule);
 }
@@ -325,13 +312,12 @@ ol.pub-list {
 .pub:last-child { border-bottom: none; }
 
 .pub::before {
-  counter-increment: pub;
-  content: counter(pub) ".";
+  content: "\2022";
   position: absolute;
-  left: 0;
-  color: var(--text-muted);
-  font-family: var(--mono);
-  font-size: 0.85rem;
+  left: 4px;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1.3;
 }
 
 .pub .pub-title { font-weight: 600; }
