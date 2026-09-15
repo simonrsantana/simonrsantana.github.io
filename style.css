@@ -49,12 +49,12 @@ body {
 body::before {
   content: "";
   position: fixed;
-  right: -70px;
-  bottom: -70px;
-  width: 440px;
-  height: 440px;
+  right: 30px;
+  bottom: 40px;
+  width: 220px;
+  height: 220px;
   background: var(--text);
-  opacity: 0.05;
+  opacity: 0.03;
   -webkit-mask-image: url("assets/watermark.png");
   mask-image: url("assets/watermark.png");
   -webkit-mask-size: contain;
