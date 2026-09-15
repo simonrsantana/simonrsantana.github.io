@@ -45,27 +45,6 @@ body {
   padding-top: 76px;
 }
 
-/* watermark */
-body::before {
-  content: "";
-  position: fixed;
-  right: 30px;
-  bottom: 40px;
-  width: 220px;
-  height: 220px;
-  background: var(--text);
-  opacity: 0.03;
-  -webkit-mask-image: url("assets/watermark.png");
-  mask-image: url("assets/watermark.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  pointer-events: none;
-  z-index: -1;
-}
 
 .page {
   max-width: var(--max-w);
@@ -429,6 +408,22 @@ footer {
   font-family: var(--sans);
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+.watermark {
+  width: 26px;
+  height: 26px;
+  margin: 14px auto 0;
+  background: var(--text);
+  opacity: 0.16;
+  -webkit-mask-image: url("assets/watermark.png");
+  mask-image: url("assets/watermark.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 /* ---------- responsive ---------- */
